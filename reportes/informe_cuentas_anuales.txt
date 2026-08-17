@@ -1,0 +1,69 @@
+INFORME ANUAL DE CUENTAS - AUDITORIA
+===================================
+
+CUENTA: 101
+-----------------------------------
+Fecha: 2024-01-01
+Transacción: deposito
+Monto: $1000.00
+Descripción: Ingreso mensual
+
+Cantidad de movimientos: 1
+Total anual: $1000.00
+===================================
+
+CUENTA: 102
+-----------------------------------
+Fecha: 2024-05-22
+Transacción: deposito
+Monto: $1500.00
+Descripción: Ingreso mensual
+
+Cantidad de movimientos: 1
+Total anual: $1500.00
+===================================
+
+CUENTA: 103
+-----------------------------------
+Fecha: 2024-07-10
+Transacción: deposito
+Monto: $2000.00
+Descripción: Ingreso mensual
+
+Cantidad de movimientos: 1
+Total anual: $2000.00
+===================================
+
+CUENTA: 105
+-----------------------------------
+Fecha: 2024-10-01
+Transacción: deposito
+Monto: $2500.00
+Descripción: Ingreso extra
+
+Cantidad de movimientos: 1
+Total anual: $2500.00
+===================================
+
+CUENTA: 106
+-----------------------------------
+Fecha: 2024-11-20
+Transacción: deposito
+Monto: $3000.00
+Descripción: Ingreso mensual
+
+Cantidad de movimientos: 1
+Total anual: $3000.00
+===================================
+
+CUENTA: 108
+-----------------------------------
+Fecha: 2024-12-31
+Transacción: deposito
+Monto: $2000.00
+Descripción: Ingreso de fin de año
+
+Cantidad de movimientos: 1
+Total anual: $2000.00
+===================================
+

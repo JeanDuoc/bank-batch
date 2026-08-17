@@ -1,0 +1,45 @@
+    REPORTE DE TRANSACCIONES DIARIAS
+    ================================
+
+    Fecha: 2024-01-01
+    Cantidad de transacciones: 1
+    Total créditos: $0.00
+    Total débitos: $1000.00
+    Total movimientos: $1000.00
+    --------------------------------
+    Fecha: 2024-01-02
+    Cantidad de transacciones: 1
+    Total créditos: $1500.00
+    Total débitos: $0.00
+    Total movimientos: $1500.00
+    --------------------------------
+    Fecha: 2024-01-04
+    Cantidad de transacciones: 1
+    Total créditos: $800.00
+    Total débitos: $0.00
+    Total movimientos: $800.00
+    --------------------------------
+    Fecha: 2024-01-05
+    Cantidad de transacciones: 2
+    Total créditos: $0.00
+    Total débitos: $1400.00
+    Total movimientos: $1400.00
+    --------------------------------
+    Fecha: 2024-01-06
+    Cantidad de transacciones: 1
+    Total créditos: $1200.00
+    Total débitos: $0.00
+    Total movimientos: $1200.00
+    --------------------------------
+    Fecha: 2024-01-07
+    Cantidad de transacciones: 1
+    Total créditos: $0.00
+    Total débitos: $3000.00
+    Total movimientos: $3000.00
+    --------------------------------
+    Fecha: 2024-01-08
+    Cantidad de transacciones: 1
+    Total créditos: $1000.00
+    Total débitos: $0.00
+    Total movimientos: $1000.00
+    --------------------------------
