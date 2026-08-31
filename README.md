@@ -112,3 +112,27 @@ diferente.
 Ejemplo:
 
 `run.id(long)=15`
+
+## Pruebas de escalabilidad
+
+Para evaluar el procesamiento paralelo se realizaron pruebas sobre el
+`transaccionesJob`, utilizando diferentes cantidades de hilos en el
+`ThreadPoolTaskExecutor`.
+
+| Cantidad de hilos | Tiempo de ejecución |
+|-------------------|---------------------|
+| 1 hilo            | 621 ms              |
+| 2 hilos           | 587 ms              |
+| 4 hilos           | 594 ms              |
+| 8 hilos           | 578 ms              |
+
+La configuración de 8 hilos obtuvo el menor tiempo de ejecución durante las
+pruebas, alcanzando 578 ms.
+
+Por este motivo se seleccionó una configuración final de 8 hilos para el
+procesamiento Batch.
+
+Las diferencias entre las configuraciones son reducidas debido al tamaño del
+dataset utilizado. Sin embargo, las pruebas permiten comprobar el
+funcionamiento del procesamiento paralelo y comparar el comportamiento del
+sistema bajo diferentes niveles de concurrencia.
