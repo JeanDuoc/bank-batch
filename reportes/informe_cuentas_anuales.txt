@@ -3,67 +3,725 @@ INFORME ANUAL DE CUENTAS - AUDITORIA
 
 CUENTA: 101
 -----------------------------------
-Fecha: 2024-01-01
+Fecha: 2024-01-07
 Transacción: deposito
-Monto: $1000.00
-Descripción: Ingreso mensual
+Monto: $2500.00
+Descripción: Retiro parcial
 
-Cantidad de movimientos: 1
-Total anual: $1000.00
+Fecha: 2024-02-19
+Transacción: compra
+Monto: $2000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-04-26
+Transacción: compra
+Monto: $1500.00
+Descripción: Ingreso extra
+
+Fecha: 2024-06-30
+Transacción: deposito
+Monto: $1500.00
+Descripción: Ingreso extra
+
+Fecha: 2024-07-20
+Transacción: retiro
+Monto: $2000.00
+Descripción: Compra en tienda
+
+Fecha: 2024-08-01
+Transacción: retiro
+Monto: $2000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-08-04
+Transacción: compra
+Monto: $2000.00
+Descripción: Compra en tienda
+
+Fecha: 2024-11-23
+Transacción: compra
+Monto: $1500.00
+Descripción: Compra en tienda
+
+Cantidad de movimientos: 8
+Total anual: $15000.00
 ===================================
 
 CUENTA: 102
 -----------------------------------
-Fecha: 2024-05-22
-Transacción: deposito
-Monto: $1500.00
-Descripción: Ingreso mensual
+Fecha: 2024-03-02
+Transacción: compra
+Monto: $1000.00
+Descripción: Ingreso extra
 
-Cantidad de movimientos: 1
-Total anual: $1500.00
+Fecha: 2024-08-13
+Transacción: compra
+Monto: $5000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-09-08
+Transacción: depósito
+Monto: $2000.00
+Descripción: Compra en tienda
+
+Fecha: 2024-09-24
+Transacción: retiro
+Monto: $1500.00
+Descripción: Compra en tienda
+
+Fecha: 2024-11-14
+Transacción: compra
+Monto: $1500.00
+Descripción: Retiro parcial
+
+Cantidad de movimientos: 5
+Total anual: $11000.00
 ===================================
 
 CUENTA: 103
 -----------------------------------
-Fecha: 2024-07-10
+Fecha: 2024-02-12
+Transacción: compra
+Monto: $3000.00
+Descripción: Compra en tienda
+
+Fecha: 2024-05-09
+Transacción: retiro
+Monto: $3000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-07-05
+Transacción: retiro
+Monto: $3000.00
+Descripción: Ingreso mensual
+
+Cantidad de movimientos: 3
+Total anual: $9000.00
+===================================
+
+CUENTA: 104
+-----------------------------------
+Fecha: 2024-08-12
 Transacción: deposito
+Monto: $1000.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-11-05
+Transacción: pago
 Monto: $2000.00
 Descripción: Ingreso mensual
 
-Cantidad de movimientos: 1
-Total anual: $2000.00
+Cantidad de movimientos: 2
+Total anual: $3000.00
 ===================================
 
 CUENTA: 105
 -----------------------------------
-Fecha: 2024-10-01
+Fecha: 2024-01-29
+Transacción: compra
+Monto: $1000.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-02-18
+Transacción: retiro
+Monto: $3000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-03-07
 Transacción: deposito
-Monto: $2500.00
+Monto: $1000.00
 Descripción: Ingreso extra
 
-Cantidad de movimientos: 1
-Total anual: $2500.00
+Fecha: 2024-04-01
+Transacción: depósito
+Monto: $1000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-04-03
+Transacción: retiro
+Monto: $1000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-04-15
+Transacción: retiro
+Monto: $3000.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-06-07
+Transacción: deposito
+Monto: $2000.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-12-13
+Transacción: compra
+Monto: $3000.00
+Descripción: Ingreso mensual
+
+Cantidad de movimientos: 8
+Total anual: $15000.00
 ===================================
 
 CUENTA: 106
 -----------------------------------
-Fecha: 2024-11-20
+Fecha: 2024-01-29
+Transacción: compra
+Monto: $1000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-03-12
+Transacción: compra
+Monto: $3000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-04-26
+Transacción: compra
+Monto: $1000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-06-28
+Transacción: retiro
+Monto: $1500.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-07-28
 Transacción: deposito
+Monto: $2000.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-10-12
+Transacción: compra
+Monto: $1500.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-11-26
+Transacción: pago
+Monto: $1500.00
+Descripción: Retiro parcial
+
+Fecha: 2024-12-04
+Transacción: retiro
+Monto: $2000.00
+Descripción: Ingreso extra
+
+Cantidad de movimientos: 8
+Total anual: $13500.00
+===================================
+
+CUENTA: 107
+-----------------------------------
+Fecha: 2024-03-19
+Transacción: compra
+Monto: $1000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-03-29
+Transacción: retiro
+Monto: $2000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-04-21
+Transacción: deposito
+Monto: $1000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-10-26
+Transacción: retiro
 Monto: $3000.00
 Descripción: Ingreso mensual
 
-Cantidad de movimientos: 1
-Total anual: $3000.00
+Fecha: 2024-11-30
+Transacción: deposito
+Monto: $3000.00
+Descripción: Compra en tienda
+
+Cantidad de movimientos: 5
+Total anual: $10000.00
 ===================================
 
 CUENTA: 108
 -----------------------------------
-Fecha: 2024-12-31
+Fecha: 2024-01-27
+Transacción: retiro
+Monto: $2000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-02-15
+Transacción: compra
+Monto: $3000.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-02-21
+Transacción: depósito
+Monto: $1500.00
+Descripción: Retiro parcial
+
+Fecha: 2024-04-16
+Transacción: compra
+Monto: $3000.00
+Descripción: Compra en tienda
+
+Fecha: 2024-04-17
+Transacción: compra
+Monto: $2000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-04-17
+Transacción: retiro
+Monto: $1500.00
+Descripción: Ingreso extra
+
+Fecha: 2024-05-14
+Transacción: deposito
+Monto: $3000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-07-17
+Transacción: retiro
+Monto: $2500.00
+Descripción: Retiro parcial
+
+Fecha: 2024-07-19
+Transacción: retiro
+Monto: $2000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-09-22
+Transacción: deposito
+Monto: $1000.00
+Descripción: Compra en tienda
+
+Fecha: 2024-11-23
+Transacción: retiro
+Monto: $1500.00
+Descripción: Compra en tienda
+
+Fecha: 2024-12-12
+Transacción: compra
+Monto: $2000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-12-17
+Transacción: deposito
+Monto: $1000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-12-20
+Transacción: retiro
+Monto: $2000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-12-22
+Transacción: deposito
+Monto: $1000.00
+Descripción: Ingreso extra
+
+Cantidad de movimientos: 15
+Total anual: $29000.00
+===================================
+
+CUENTA: 109
+-----------------------------------
+Fecha: 2024-03-22
+Transacción: depósito
+Monto: $1500.00
+Descripción: Compra en tienda
+
+Fecha: 2024-04-03
+Transacción: compra
+Monto: $1500.00
+Descripción: Ingreso extra
+
+Fecha: 2024-06-25
+Transacción: deposito
+Monto: $2500.00
+Descripción: Retiro parcial
+
+Fecha: 2024-11-09
+Transacción: compra
+Monto: $3000.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-11-14
+Transacción: deposito
+Monto: $1500.00
+Descripción: Compra en tienda
+
+Cantidad de movimientos: 5
+Total anual: $10000.00
+===================================
+
+CUENTA: 111
+-----------------------------------
+Fecha: 2024-02-15
+Transacción: retiro
+Monto: $2500.00
+Descripción: Compra en tienda
+
+Fecha: 2024-03-25
+Transacción: retiro
+Monto: $2500.00
+Descripción: Ingreso extra
+
+Fecha: 2024-04-26
+Transacción: retiro
+Monto: $2000.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-04-29
+Transacción: deposito
+Monto: $5000.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-05-10
+Transacción: retiro
+Monto: $1500.00
+Descripción: Compra en tienda
+
+Fecha: 2024-06-29
+Transacción: deposito
+Monto: $2500.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-07-30
+Transacción: depósito
+Monto: $3000.00
+Descripción: Compra en tienda
+
+Fecha: 2024-11-04
+Transacción: retiro
+Monto: $3000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-12-11
+Transacción: pago
+Monto: $1500.00
+Descripción: Ingreso mensual
+
+Cantidad de movimientos: 9
+Total anual: $23500.00
+===================================
+
+CUENTA: 112
+-----------------------------------
+Fecha: 2024-03-23
+Transacción: deposito
+Monto: $1000.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-07-23
+Transacción: compra
+Monto: $3000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-08-25
+Transacción: compra
+Monto: $2500.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-10-01
+Transacción: deposito
+Monto: $1000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-10-06
 Transacción: deposito
 Monto: $2000.00
-Descripción: Ingreso de fin de año
+Descripción: Ingreso extra
 
-Cantidad de movimientos: 1
-Total anual: $2000.00
+Cantidad de movimientos: 5
+Total anual: $9500.00
+===================================
+
+CUENTA: 113
+-----------------------------------
+Fecha: 2024-02-27
+Transacción: deposito
+Monto: $1000.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-02-29
+Transacción: retiro
+Monto: $2500.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-04-05
+Transacción: deposito
+Monto: $1000.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-09-02
+Transacción: depósito
+Monto: $3000.00
+Descripción: Compra en tienda
+
+Fecha: 2024-11-13
+Transacción: pago
+Monto: $2000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-11-21
+Transacción: retiro
+Monto: $1000.00
+Descripción: Compra en tienda
+
+Cantidad de movimientos: 6
+Total anual: $10500.00
+===================================
+
+CUENTA: 114
+-----------------------------------
+Fecha: 2024-02-07
+Transacción: retiro
+Monto: $3000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-02-13
+Transacción: compra
+Monto: $2000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-02-19
+Transacción: retiro
+Monto: $1000.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-03-03
+Transacción: compra
+Monto: $1500.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-03-26
+Transacción: deposito
+Monto: $2000.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-04-16
+Transacción: deposito
+Monto: $2000.00
+Descripción: Compra en tienda
+
+Fecha: 2024-04-23
+Transacción: deposito
+Monto: $1500.00
+Descripción: Compra en tienda
+
+Fecha: 2024-05-22
+Transacción: compra
+Monto: $2000.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-09-04
+Transacción: compra
+Monto: $2500.00
+Descripción: Retiro parcial
+
+Fecha: 2024-10-01
+Transacción: compra
+Monto: $1500.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-10-01
+Transacción: compra
+Monto: $2000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-10-29
+Transacción: retiro
+Monto: $2500.00
+Descripción: Ingreso mensual
+
+Cantidad de movimientos: 12
+Total anual: $23500.00
+===================================
+
+CUENTA: 115
+-----------------------------------
+Fecha: 2024-01-23
+Transacción: compra
+Monto: $1000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-06-17
+Transacción: compra
+Monto: $1000.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-08-15
+Transacción: compra
+Monto: $2000.00
+Descripción: Compra en tienda
+
+Fecha: 2024-11-29
+Transacción: deposito
+Monto: $1000.00
+Descripción: Ingreso extra
+
+Cantidad de movimientos: 4
+Total anual: $5000.00
+===================================
+
+CUENTA: 116
+-----------------------------------
+Fecha: 2024-01-03
+Transacción: deposito
+Monto: $2500.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-03-23
+Transacción: deposito
+Monto: $2000.00
+Descripción: Compra en tienda
+
+Fecha: 2024-04-19
+Transacción: pago
+Monto: $1500.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-06-30
+Transacción: retiro
+Monto: $1000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-10-07
+Transacción: retiro
+Monto: $2000.00
+Descripción: Compra en tienda
+
+Cantidad de movimientos: 5
+Total anual: $9000.00
+===================================
+
+CUENTA: 117
+-----------------------------------
+Fecha: 2024-03-01
+Transacción: deposito
+Monto: $3000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-05-21
+Transacción: deposito
+Monto: $1500.00
+Descripción: Ingreso extra
+
+Fecha: 2024-09-27
+Transacción: pago
+Monto: $3000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-11-07
+Transacción: compra
+Monto: $3000.00
+Descripción: Ingreso navideño
+
+Cantidad de movimientos: 4
+Total anual: $10500.00
+===================================
+
+CUENTA: 118
+-----------------------------------
+Fecha: 2024-01-30
+Transacción: retiro
+Monto: $2500.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-03-05
+Transacción: compra
+Monto: $2000.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-04-18
+Transacción: deposito
+Monto: $3000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-05-22
+Transacción: retiro
+Monto: $1000.00
+Descripción: Ingreso extra
+
+Fecha: 2024-07-14
+Transacción: deposito
+Monto: $3000.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-08-26
+Transacción: compra
+Monto: $5000.00
+Descripción: Compra en tienda
+
+Fecha: 2024-11-11
+Transacción: compra
+Monto: $3000.00
+Descripción: Ingreso navideño
+
+Cantidad de movimientos: 7
+Total anual: $19500.00
+===================================
+
+CUENTA: 119
+-----------------------------------
+Fecha: 2024-05-22
+Transacción: deposito
+Monto: $1000.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-05-26
+Transacción: compra
+Monto: $1000.00
+Descripción: Compra en tienda
+
+Fecha: 2024-08-03
+Transacción: compra
+Monto: $5000.00
+Descripción: Compra en tienda
+
+Fecha: 2024-10-26
+Transacción: compra
+Monto: $2000.00
+Descripción: Retiro parcial
+
+Fecha: 2024-11-18
+Transacción: retiro
+Monto: $3000.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-12-13
+Transacción: retiro
+Monto: $1500.00
+Descripción: Ingreso extra
+
+Cantidad de movimientos: 6
+Total anual: $13500.00
+===================================
+
+CUENTA: 120
+-----------------------------------
+Fecha: 2024-02-07
+Transacción: deposito
+Monto: $1500.00
+Descripción: Retiro parcial
+
+Fecha: 2024-03-21
+Transacción: deposito
+Monto: $2500.00
+Descripción: Ingreso navideño
+
+Fecha: 2024-07-28
+Transacción: retiro
+Monto: $3000.00
+Descripción: Ingreso mensual
+
+Fecha: 2024-08-18
+Transacción: deposito
+Monto: $1500.00
+Descripción: Compra en tienda
+
+Fecha: 2024-10-27
+Transacción: retiro
+Monto: $3000.00
+Descripción: Ingreso extra
+
+Cantidad de movimientos: 5
+Total anual: $11500.00
 ===================================
 

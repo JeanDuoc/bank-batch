@@ -2,8 +2,10 @@ package cl.duoc.bankbatch.config;
 
 import cl.duoc.bankbatch.dto.TransaccionCsv;
 import cl.duoc.bankbatch.model.Transaccion;
+import cl.duoc.bankbatch.policy.BankSkipPolicy;
 import cl.duoc.bankbatch.processor.TransaccionProcessor;
 import cl.duoc.bankbatch.tasklet.ReporteTransaccionesTasklet;
+
 import org.springframework.batch.core.job.Job;
 import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.repository.JobRepository;
@@ -12,14 +14,15 @@ import org.springframework.batch.core.step.builder.StepBuilder;
 import org.springframework.batch.infrastructure.item.database.JdbcBatchItemWriter;
 import org.springframework.batch.infrastructure.item.database.builder.JdbcBatchItemWriterBuilder;
 import org.springframework.batch.infrastructure.item.file.FlatFileItemReader;
-import org.springframework.batch.infrastructure.item.file.FlatFileParseException;
 import org.springframework.batch.infrastructure.item.file.builder.FlatFileItemReaderBuilder;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.dao.TransientDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.core.task.AsyncTaskExecutor;
 
 import javax.sql.DataSource;
 
@@ -46,7 +49,8 @@ public class TransaccionesJobConfig {
     }
 
     @Bean
-    public JdbcBatchItemWriter<Transaccion> transaccionWriter(DataSource dataSource) {
+    public JdbcBatchItemWriter<Transaccion> transaccionWriter(
+            DataSource dataSource) {
 
         return new JdbcBatchItemWriterBuilder<Transaccion>()
                 .dataSource(dataSource)
@@ -66,7 +70,9 @@ public class TransaccionesJobConfig {
             PlatformTransactionManager transactionManager,
             FlatFileItemReader<TransaccionCsv> transaccionReader,
             TransaccionProcessor transaccionProcessor,
-            JdbcBatchItemWriter<Transaccion> transaccionWriter) {
+            JdbcBatchItemWriter<Transaccion> transaccionWriter,
+            BankSkipPolicy bankSkipPolicy,
+            AsyncTaskExecutor batchTaskExecutor) {
 
         return new StepBuilder("transaccionesStep", jobRepository)
                 .<TransaccionCsv, Transaccion>chunk(10)
@@ -74,23 +80,25 @@ public class TransaccionesJobConfig {
                 .reader(transaccionReader)
                 .processor(transaccionProcessor)
                 .writer(transaccionWriter)
+                .taskExecutor(batchTaskExecutor)
 
                 .faultTolerant()
 
-                .skip(FlatFileParseException.class)
-                .skipLimit(10)
+                .skipPolicy(bankSkipPolicy)
 
                 .retry(TransientDataAccessException.class)
                 .retryLimit(3)
 
                 .build();
     }
+
     @Bean
     public ReporteTransaccionesTasklet reporteTransaccionesTasklet(
             JdbcTemplate jdbcTemplate) {
 
         return new ReporteTransaccionesTasklet(jdbcTemplate);
     }
+
     @Bean
     public Step reporteTransaccionesStep(
             JobRepository jobRepository,
@@ -98,7 +106,10 @@ public class TransaccionesJobConfig {
             ReporteTransaccionesTasklet reporteTransaccionesTasklet) {
 
         return new StepBuilder("reporteTransaccionesStep", jobRepository)
-                .tasklet(reporteTransaccionesTasklet, transactionManager)
+                .tasklet(
+                        reporteTransaccionesTasklet,
+                        transactionManager
+                )
                 .build();
     }
 
@@ -108,7 +119,10 @@ public class TransaccionesJobConfig {
             Step transaccionesStep,
             Step reporteTransaccionesStep) {
 
-        return new JobBuilder("transaccionesJob", jobRepository)
+        return new JobBuilder(
+                "transaccionesJob",
+                jobRepository
+        )
                 .start(transaccionesStep)
                 .next(reporteTransaccionesStep)
                 .build();

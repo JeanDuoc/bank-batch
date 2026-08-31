@@ -14,10 +14,10 @@ public class TransaccionProcessor implements ItemProcessor<TransaccionCsv, Trans
     public Transaccion process(TransaccionCsv item) {
 
         try {
-            Integer id = Integer.parseInt(item.getId());
-            LocalDate fecha = LocalDate.parse(item.getFecha());
-            BigDecimal monto = new BigDecimal(item.getMonto());
-            String tipo = item.getTipo();
+            Integer id = Integer.parseInt(item.getId().trim());
+            LocalDate fecha = LocalDate.parse(item.getFecha().trim());
+            BigDecimal monto = new BigDecimal(item.getMonto().trim());
+            String tipo = item.getTipo().trim();
 
             if (monto.compareTo(BigDecimal.ZERO) <= 0) {
                 System.out.println("Transacción omitida por monto inválido: " + item.getMonto());

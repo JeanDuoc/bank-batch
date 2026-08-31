@@ -2,7 +2,9 @@ package cl.duoc.bankbatch.config;
 
 import cl.duoc.bankbatch.dto.InteresCsv;
 import cl.duoc.bankbatch.model.Interes;
+import cl.duoc.bankbatch.policy.BankSkipPolicy;
 import cl.duoc.bankbatch.processor.InteresProcessor;
+
 import org.springframework.batch.core.job.Job;
 import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.repository.JobRepository;
@@ -11,13 +13,14 @@ import org.springframework.batch.core.step.builder.StepBuilder;
 import org.springframework.batch.infrastructure.item.database.JdbcBatchItemWriter;
 import org.springframework.batch.infrastructure.item.database.builder.JdbcBatchItemWriterBuilder;
 import org.springframework.batch.infrastructure.item.file.FlatFileItemReader;
-import org.springframework.batch.infrastructure.item.file.FlatFileParseException;
 import org.springframework.batch.infrastructure.item.file.builder.FlatFileItemReaderBuilder;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.dao.TransientDataAccessException;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.core.task.AsyncTaskExecutor;
 
 import javax.sql.DataSource;
 
@@ -44,7 +47,8 @@ public class InteresesJobConfig {
     }
 
     @Bean
-    public JdbcBatchItemWriter<Interes> interesWriter(DataSource dataSource) {
+    public JdbcBatchItemWriter<Interes> interesWriter(
+            DataSource dataSource) {
 
         return new JdbcBatchItemWriterBuilder<Interes>()
                 .dataSource(dataSource)
@@ -67,7 +71,9 @@ public class InteresesJobConfig {
             PlatformTransactionManager transactionManager,
             FlatFileItemReader<InteresCsv> interesReader,
             InteresProcessor interesProcessor,
-            JdbcBatchItemWriter<Interes> interesWriter) {
+            JdbcBatchItemWriter<Interes> interesWriter,
+            BankSkipPolicy bankSkipPolicy,
+            AsyncTaskExecutor batchTaskExecutor) {
 
         return new StepBuilder("interesesStep", jobRepository)
                 .<InteresCsv, Interes>chunk(10)
@@ -75,10 +81,12 @@ public class InteresesJobConfig {
                 .reader(interesReader)
                 .processor(interesProcessor)
                 .writer(interesWriter)
+                .taskExecutor(batchTaskExecutor)
 
                 .faultTolerant()
-                .skip(FlatFileParseException.class)
-                .skipLimit(10)
+
+                .skipPolicy(bankSkipPolicy)
+
                 .retry(TransientDataAccessException.class)
                 .retryLimit(3)
 

@@ -2,12 +2,14 @@ package cl.duoc.bankbatch.config;
 
 import cl.duoc.bankbatch.dto.CuentaAnualCsv;
 import cl.duoc.bankbatch.model.CuentaAnual;
+import cl.duoc.bankbatch.policy.BankSkipPolicy;
 import cl.duoc.bankbatch.processor.CuentaAnualProcessor;
+import cl.duoc.bankbatch.tasklet.ReporteAnualTasklet;
 
 import org.springframework.batch.core.job.Job;
-import org.springframework.batch.core.step.Step;
 import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.repository.JobRepository;
+import org.springframework.batch.core.step.Step;
 import org.springframework.batch.core.step.builder.StepBuilder;
 
 import org.springframework.batch.infrastructure.item.database.JdbcBatchItemWriter;
@@ -18,15 +20,12 @@ import org.springframework.batch.infrastructure.item.file.builder.FlatFileItemRe
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.dao.TransientDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.core.task.AsyncTaskExecutor;
 
 import javax.sql.DataSource;
-
-import org.springframework.batch.infrastructure.item.file.FlatFileParseException;
-import org.springframework.dao.TransientDataAccessException;
-
-import cl.duoc.bankbatch.tasklet.ReporteAnualTasklet;
-import org.springframework.jdbc.core.JdbcTemplate;
 
 @Configuration
 public class CuentasAnualesJobConfig {
@@ -55,10 +54,14 @@ public class CuentasAnualesJobConfig {
     public CuentaAnualProcessor cuentaAnualProcessor() {
         return new CuentaAnualProcessor();
     }
+
     @Bean
-    public ReporteAnualTasklet reporteAnualTasklet(JdbcTemplate jdbcTemplate) {
+    public ReporteAnualTasklet reporteAnualTasklet(
+            JdbcTemplate jdbcTemplate) {
+
         return new ReporteAnualTasklet(jdbcTemplate);
     }
+
     @Bean
     public Step reporteAnualStep(
             JobRepository jobRepository,
@@ -93,7 +96,9 @@ public class CuentasAnualesJobConfig {
             PlatformTransactionManager transactionManager,
             FlatFileItemReader<CuentaAnualCsv> cuentaAnualReader,
             CuentaAnualProcessor cuentaAnualProcessor,
-            JdbcBatchItemWriter<CuentaAnual> cuentaAnualWriter) {
+            JdbcBatchItemWriter<CuentaAnual> cuentaAnualWriter,
+            BankSkipPolicy bankSkipPolicy,
+            AsyncTaskExecutor batchTaskExecutor) {
 
         return new StepBuilder("cuentasAnualesStep", jobRepository)
                 .<CuentaAnualCsv, CuentaAnual>chunk(10)
@@ -101,11 +106,11 @@ public class CuentasAnualesJobConfig {
                 .reader(cuentaAnualReader)
                 .processor(cuentaAnualProcessor)
                 .writer(cuentaAnualWriter)
+                .taskExecutor(batchTaskExecutor)
 
                 .faultTolerant()
 
-                .skip(FlatFileParseException.class)
-                .skipLimit(10)
+                .skipPolicy(bankSkipPolicy)
 
                 .retry(TransientDataAccessException.class)
                 .retryLimit(3)
